@@ -1,17 +1,35 @@
 # cedar
 
-A new Flutter project.
+# Cedar
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Prerequisites
+Make sure you have the following installed before cloning the project
+- Flutter
+- X-CODE
+- Android Studio
 
-A few resources to get you started if this is your first Flutter project:
+# Set up 
+git clone the repo https://github.com/jhaym3s/cedar.git
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+install flutter dependencies using `flutter pub get`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+then run `flutter run`
+
+
+## Security steps
+I did not any secrets there are in the block state 
+I made sure to clear the bloc state when I was done with the secrets (_onReceived)
+
+I added the logout feature that prevernts the user after 30 seeconds especially since it is TOPT (mock data source) 
+
+
+
+I used crypto for HMAC-SHA1
+Bloc
+qr_flutter 
+
+
+
+
+ 

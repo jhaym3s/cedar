@@ -37,6 +37,9 @@ server — it stores the secret and runs Totp.verify.
  The UI never sees the secret after enrollment(explained in security precautions above).
 
 
+ Verification was left out because I saw the task at a wrong time but didnt want to exceed time 
+
+
 
 https://github.com/user-attachments/assets/de62872a-f24d-48a9-9149-41b732b2627c
 

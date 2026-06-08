@@ -39,5 +39,12 @@ server — it stores the secret and runs Totp.verify.
 https://github.com/user-attachments/assets/de62872a-f24d-48a9-9149-41b732b2627c
 
 
+# with err 
+
+https://github.com/user-attachments/assets/bda898c3-6a1d-4b0c-94ae-2510a09f6bb3
+
+
+
+
 
 

@@ -38,6 +38,7 @@ dependencies:
   equatable: ^2.0.8
   crypto: ^3.0.7
   qr_flutter: ^4.1.0
+  bloc: ^9.2.1
 
 dev_dependencies:
   flutter_test:

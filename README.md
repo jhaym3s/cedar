@@ -21,13 +21,18 @@ then run `flutter run`
 I did not any secrets there are in the block state 
 I made sure to clear the bloc state when I was done with the secrets (_onReceived)
 
-I added the logout feature that prevernts the user after 30 seeconds especially since it is TOPT (mock data source) 
+I added the logout feature that prevernts the user after 30 seeconds especially since it is TOPT 
 
 
-
+# Packages used
 I used crypto for HMAC-SHA1
-Bloc
+Bloc/flutterbloc for state management
 qr_flutter 
+
+
+
+
+
 
 
 https://github.com/user-attachments/assets/de62872a-f24d-48a9-9149-41b732b2627c

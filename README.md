@@ -25,7 +25,9 @@ I added the lockout feature(replay protection) that prevents the user from stayi
 
 # Packages used
 I used crypto for HMAC-SHA1
+
 Bloc/flutterbloc for state management
+
 qr_flutter 
 
 Validation happens inside the mock data source, not in the UI. That mirrors

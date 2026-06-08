@@ -1,6 +1,6 @@
-# cedar
 
-# Cedar
+
+# cedar
 
 
 # Prerequisites
@@ -30,6 +30,8 @@ Bloc
 qr_flutter 
 
 
+https://github.com/user-attachments/assets/de62872a-f24d-48a9-9149-41b732b2627c
 
 
- 
+
+

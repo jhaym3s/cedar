@@ -1,8 +1,9 @@
 import 'package:cedar/features/security/bloc/enrollment_bloc.dart';
+import 'package:cedar/features/security/presentation/screens/verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
+import '../../bloc/verification_bloc.dart';
 import '../../data/repository.dart';
 import 'enrollment_screen.dart';
 
@@ -29,6 +30,25 @@ class _HomeScreenState extends State<HomeScreen> {
     if (result == true && mounted) setState(() => _enabled = true);
   }
 
+
+
+  Future<void> _verify() async {
+    final repo = context.read<TOTPRepository>();
+    final ok = await Navigator.of(context).push<bool>(
+      MaterialPageRoute(
+        builder: (_) => BlocProvider(
+          create: (_) => VerificationBloc(repo,),
+          child: const VerificationScreen(),
+        ),
+      ),
+    );
+    if (ok == true && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Transfer approved!')),
+      );
+    }
+  }
+
   
 
   @override
@@ -48,14 +68,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-
             const SizedBox(height: 8),
             FilledButton.icon(
               icon: const Icon(Icons.qr_code),
               label: Text(_enabled ? 'Re enroll authenticator' : 'Set up TOTP authenticator'),
               onPressed: _enroll,
             ),
-            const SizedBox(height: 8),
+             const SizedBox(height: 8),
+          OutlinedButton.icon(
+            icon: const Icon(Icons.send),
+            label: const Text('merchant transfer'),
+            onPressed: _enabled ? _verify : null,
+          ),
           ],
         ),
       ),

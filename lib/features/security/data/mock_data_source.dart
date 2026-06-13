@@ -38,7 +38,7 @@ class MockTOPTDataSource implements TOTPDataSource {
     await _delay();
     final secret = _fixedSecret ?? _generateSecret();
     _pendingSecret = secret;
-    final uri = 'otpauth://totp/Cedar: jhaymesifiok@gmail.com'
+    final uri = 'otpauth://totp/Cedar:(jhaymesifiok@gmail.com)'
         '?secret=$secret&issuer=Cedar&algorithm=SHA1&digits=6&period=30';
     return EnrollStartResponse(secret: secret, otpauthUri: uri);
   }

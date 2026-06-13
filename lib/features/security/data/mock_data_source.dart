@@ -11,9 +11,9 @@ class MockTOPTDataSource implements TOTPDataSource {
   MockTOPTDataSource({
     Totp? totp,
     DateTime Function()? clock,
-    this.networkDelay = const Duration(milliseconds: 20), // Simulate network latency. 
+    this.networkDelay = const Duration(milliseconds: 20), 
     this.maxAttempts = 5,
-    this.lockoutDuration = const Duration(seconds: 30), // Lock out for 30s after max attempts.
+    this.lockoutDuration = const Duration(seconds: 30), 
     String? fixedSecret, 
   })  : _totp = totp ?? const Totp(),
         _clock = clock ?? DateTime.now,

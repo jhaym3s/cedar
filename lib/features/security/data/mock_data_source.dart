@@ -105,7 +105,7 @@ class MockTOPTDataSource implements TOTPDataSource {
 
   List<String> _generateRecoveryCodes({int count = 10}) {
     final rng = Random.secure();
-    const alphabet = '0123456789';
+    const alphabet = Base32.alphabet;
     return List.generate(count, (_) {
       final raw =
           List.generate(10, (_) => alphabet[rng.nextInt(alphabet.length)])

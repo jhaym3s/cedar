@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 
 class Base32 {
-  static const _alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+  static const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
   static Uint8List decode(String input) {
     final cleaned = input.toUpperCase().replaceAll(RegExp(r'[\s=]'), '');
@@ -10,7 +10,7 @@ class Base32 {
     var value = 0;
     final out = <int>[];
     for (final ch in cleaned.codeUnits) {
-      final idx = _alphabet.indexOf(String.fromCharCode(ch));
+      final idx = alphabet.indexOf(String.fromCharCode(ch));
       if (idx == -1) {
         throw const FormatException('Invalid Base32 character in secret');
       }
@@ -32,12 +32,12 @@ class Base32 {
       value = (value << 8) | b;
       bits += 8;
       while (bits >= 5) {
-        out.write(_alphabet[(value >> (bits - 5)) & 0x1F]);
+        out.write(alphabet[(value >> (bits - 5)) & 0x1F]);
         bits -= 5;
       }
     }
     if (bits > 0) {
-      out.write(_alphabet[(value << (5 - bits)) & 0x1F]);
+      out.write(alphabet[(value << (5 - bits)) & 0x1F]);
     }
     return out.toString();
   }

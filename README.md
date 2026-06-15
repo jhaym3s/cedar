@@ -37,6 +37,10 @@ the code that is being passed in is now converted into a bytes. the counter whic
 then this is used with the decode bytes to generate a code and then verify the code entered
 
 
+I added the verification feature
+And what I did here was 
+
+
 ## Security Precautions
 I did not log any secrets; they are in the block state 
 I made sure to clear the bloc state when I was done with the secrets (_onReceived)
